@@ -3,6 +3,8 @@ package com.revature.util;
 import java.util.LinkedList;
 import java.util.List;
 import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.Collections;
 
 public class Configuration {
@@ -10,6 +12,7 @@ public class Configuration {
 	private String dbUrl;
 	private String dbUsername;
 	private String dbPassword;
+	private static Connection conn = null;
 	
 	private List<MetaModel<Class<?>>> metaModelList;
 	
@@ -34,7 +37,24 @@ public class Configuration {
 		this.dbUsername = dbUsername;
 		this.dbPassword = dbPassword;
 		
-		return null;
+		try {
+			if (conn != null && !conn.isClosed()) {
+				return conn;
+			}
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return null;
+		}
+		
+		try {
+			conn = DriverManager.getConnection(dbUrl, dbUsername, dbPassword);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return conn;
 	}
 	
 }

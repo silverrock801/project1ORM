@@ -4,6 +4,9 @@ import java.lang.reflect.Field;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.revature.annotations.Column;
 import com.revature.annotations.TableName;
 import com.revature.annotations.Id;
@@ -15,6 +18,8 @@ public class MetaModel<T> {
 	private PrimaryKeyField primaryKeyField;
 	private List<ColumnField> columnFields;
 	private List<ForeignKeyField> foreignKeyFields;
+	private static final Logger log = LoggerFactory.getLogger(MetaModel.class);
+	
 	
 	public static MetaModel<Class<?>> of (Class<?> clazz){
 		if (clazz.getAnnotation(TableName.class) == null) {

@@ -27,6 +27,18 @@
 
 
 
+
+		<dependency><!-- SLF4J API -->
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.25</version>
+		</dependency>
+		<dependency> <!-- Binding Dependency (Bridge) to Log4j -->
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.25</version>
+		</dependency>
+
 		<!-- Log4J Framework -->
 		<dependency>
 			<groupId>log4j</groupId>
