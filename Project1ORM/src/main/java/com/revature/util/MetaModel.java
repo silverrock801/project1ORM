@@ -14,11 +14,13 @@ import com.revature.annotations.JoinColumn;
 
 public class MetaModel<T> {
 
+	private static final Logger log = LoggerFactory.getLogger(MetaModel.class);
+	
 	private Class<?> clazz;
 	private PrimaryKeyField primaryKeyField;
 	private List<ColumnField> columnFields;
 	private List<ForeignKeyField> foreignKeyFields;
-	private static final Logger log = LoggerFactory.getLogger(MetaModel.class);
+
 	
 	
 	public static MetaModel<Class<?>> of (Class<?> clazz){
