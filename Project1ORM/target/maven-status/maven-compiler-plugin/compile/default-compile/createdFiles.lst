@@ -1,0 +1,16 @@
+com\revature\annotations\TableName.class
+com\revature\annotations\Ignore.class
+com\revature\demo\Pokemon.class
+com\revature\demo\Trainers.class
+com\revature\util\MetaModel.class
+com\revature\util\PrimaryKeyField.class
+com\revature\util\ForeignKeyField.class
+com\revature\annotations\JoinColumn.class
+com\revature\util\Configuration.class
+com\revature\util\ColumnField.class
+com\revature\demo\Driver.class
+com\revature\util\PropertiesCache.class
+com\revature\annotations\Column.class
+com\revature\util\PropertiesCache$LazyHolder.class
+com\revature\annotations\Id.class
+com\revature\persistence\Queries.class

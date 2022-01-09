@@ -23,7 +23,7 @@ public class MetaModel<T> {
 
 	
 	
-	public static MetaModel<Class<?>> of (Class<?> clazz){
+	public static MetaModel<Class<?>> of(Class<?> clazz){
 		if (clazz.getAnnotation(TableName.class) == null) {
 			throw new IllegalStateException("Cannot create MetaModel object! Provided class" + 
 					clazz.getName() + " is not annotated with @TableName");

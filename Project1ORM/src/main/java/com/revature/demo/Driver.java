@@ -33,7 +33,7 @@ public class Driver {
 		
 		 int count = 0;
 		 
-		 cfg.addAnnotatedClass(Trainers.class);
+		// cfg.addAnnotatedClass(Trainers.class);
 		 
 
 	 System.out.println("Final count is: " + count);
@@ -51,7 +51,12 @@ public class Driver {
 			
 			quer.addcolumns(metamodels);
 			
+			quer.addrow(metamodels, charmander);
+			
+			quer.addrow(metamodels, bulbasaur);
+			
 			quer.readTable(metamodels);
+
 			
 			
 			//quer.deleteTable(metamodels);

@@ -8,7 +8,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -229,11 +231,13 @@ public class Queries {
 		
 		
 	
-	public void readTable(MetaModel<?> clazz) {
+	public List<Objects> readTable(MetaModel<?> clazz) {
 		log.info("*************************************");
 		log.info("Reading Table");
 		log.info("*************************************");
-			
+		
+		List<Objects> fullTable = new LinkedList<Objects>();
+		
 		String sql = "SELECT * FROM " + clazz.getSimpleClassName().toLowerCase();
 			
 			Connection conn = null;
@@ -252,14 +256,13 @@ public class Queries {
 			} catch (SQLException e) {
 				log.error("Unable to read table");
 			}
+			return null;
 	}
 	
 	public void readrow(Class<?> clazz, Object o) throws IllegalArgumentException, IllegalAccessException {
 		log.info("*************************************");
 		log.info("Reading Row");
 		log.info("*************************************");
-		
-		if (!((AnnotatedElement)clazz).isAnnotationPresent(Ignore.class)) {
 			
 			String sql = "SELECT * FROM " + clazz.getSimpleName().toLowerCase() + " WHERE";
 			
@@ -286,7 +289,6 @@ public class Queries {
 				log.error("Unable to read row");
 			}
 			
-		}
 	}
 	
 	public void addrow(MetaModel<?> metamodels, Object o) throws IllegalArgumentException, IllegalAccessException {
@@ -345,7 +347,6 @@ public class Queries {
 			
 		sql += ")";
 
-		System.out.println(sql);
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
@@ -371,6 +372,10 @@ public class Queries {
 		*/
 		
 	}
+	
+	
+
+	
 	
 	public void updaterow(Class<?> clazz, Object o, Field f) throws IllegalArgumentException, IllegalAccessException {
 		

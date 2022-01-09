@@ -4677,3 +4677,61 @@
 2022-01-09 16:00:24 INFO  revature.util.Configuration:48 - Trying to establish a connection
 2022-01-09 16:00:24 INFO  revature.util.Configuration:49 - *********************************
 2022-01-09 16:00:24 INFO  revature.persistence.Queries:249 - Table successfully read
+2022-01-09 16:07:59 INFO  revature.util.Configuration:47 - *********************************
+2022-01-09 16:07:59 INFO  revature.util.Configuration:48 - Trying to establish a connection
+2022-01-09 16:07:59 INFO  revature.util.Configuration:49 - *********************************
+2022-01-09 16:07:59 INFO  revature.util.Configuration:74 - *********************************
+2022-01-09 16:07:59 INFO  revature.util.Configuration:75 - Connected to Database
+2022-01-09 16:07:59 INFO  revature.util.Configuration:76 - *********************************
+2022-01-09 16:07:59 INFO  revature.persistence.Queries:49 - Table exists. Updating the table
+2022-01-09 16:07:59 INFO  revature.persistence.Queries:69 - *************************************
+2022-01-09 16:07:59 INFO  revature.persistence.Queries:70 - CREATING TABLE
+2022-01-09 16:07:59 INFO  revature.persistence.Queries:71 - *************************************
+2022-01-09 16:07:59 INFO  revature.util.Configuration:47 - *********************************
+2022-01-09 16:07:59 INFO  revature.util.Configuration:48 - Trying to establish a connection
+2022-01-09 16:07:59 INFO  revature.util.Configuration:49 - *********************************
+2022-01-09 16:07:59 ERROR revature.persistence.Queries:95 - Unable to create the table. There was an error
+2022-01-09 16:07:59 INFO  revature.persistence.Queries:102 - *************************************
+2022-01-09 16:07:59 INFO  revature.persistence.Queries:103 - Adding Columns to Table
+2022-01-09 16:07:59 INFO  revature.persistence.Queries:104 - *************************************
+2022-01-09 16:07:59 INFO  revature.util.Configuration:47 - *********************************
+2022-01-09 16:07:59 INFO  revature.util.Configuration:48 - Trying to establish a connection
+2022-01-09 16:07:59 INFO  revature.util.Configuration:49 - *********************************
+2022-01-09 16:07:59 ERROR revature.persistence.Queries:124 - Unable to add primary key column
+2022-01-09 16:07:59 INFO  revature.util.Configuration:47 - *********************************
+2022-01-09 16:07:59 INFO  revature.util.Configuration:48 - Trying to establish a connection
+2022-01-09 16:07:59 INFO  revature.util.Configuration:49 - *********************************
+2022-01-09 16:07:59 ERROR revature.persistence.Queries:147 - Unable to add VARCHAR column
+2022-01-09 16:07:59 INFO  revature.util.Configuration:47 - *********************************
+2022-01-09 16:07:59 INFO  revature.util.Configuration:48 - Trying to establish a connection
+2022-01-09 16:07:59 INFO  revature.util.Configuration:49 - *********************************
+2022-01-09 16:07:59 ERROR revature.persistence.Queries:192 - Unable to add INTEGER column
+2022-01-09 16:07:59 INFO  revature.util.Configuration:47 - *********************************
+2022-01-09 16:07:59 INFO  revature.util.Configuration:48 - Trying to establish a connection
+2022-01-09 16:07:59 INFO  revature.util.Configuration:49 - *********************************
+2022-01-09 16:07:59 ERROR revature.persistence.Queries:147 - Unable to add VARCHAR column
+2022-01-09 16:07:59 INFO  revature.util.Configuration:47 - *********************************
+2022-01-09 16:07:59 INFO  revature.util.Configuration:48 - Trying to establish a connection
+2022-01-09 16:07:59 INFO  revature.util.Configuration:49 - *********************************
+2022-01-09 16:07:59 ERROR revature.persistence.Queries:169 - Unable to add BOOLEAN column
+2022-01-09 16:07:59 INFO  revature.persistence.Queries:294 - *************************************
+2022-01-09 16:07:59 INFO  revature.persistence.Queries:295 - Adding Row
+2022-01-09 16:07:59 INFO  revature.persistence.Queries:296 - *************************************
+2022-01-09 16:07:59 INFO  revature.util.Configuration:47 - *********************************
+2022-01-09 16:07:59 INFO  revature.util.Configuration:48 - Trying to establish a connection
+2022-01-09 16:07:59 INFO  revature.util.Configuration:49 - *********************************
+2022-01-09 16:07:59 ERROR revature.persistence.Queries:363 - Unable to add row
+2022-01-09 16:07:59 INFO  revature.persistence.Queries:294 - *************************************
+2022-01-09 16:07:59 INFO  revature.persistence.Queries:295 - Adding Row
+2022-01-09 16:07:59 INFO  revature.persistence.Queries:296 - *************************************
+2022-01-09 16:07:59 INFO  revature.util.Configuration:47 - *********************************
+2022-01-09 16:07:59 INFO  revature.util.Configuration:48 - Trying to establish a connection
+2022-01-09 16:07:59 INFO  revature.util.Configuration:49 - *********************************
+2022-01-09 16:07:59 ERROR revature.persistence.Queries:363 - Unable to add row
+2022-01-09 16:07:59 INFO  revature.persistence.Queries:233 - *************************************
+2022-01-09 16:07:59 INFO  revature.persistence.Queries:234 - Reading Table
+2022-01-09 16:07:59 INFO  revature.persistence.Queries:235 - *************************************
+2022-01-09 16:07:59 INFO  revature.util.Configuration:47 - *********************************
+2022-01-09 16:07:59 INFO  revature.util.Configuration:48 - Trying to establish a connection
+2022-01-09 16:07:59 INFO  revature.util.Configuration:49 - *********************************
+2022-01-09 16:07:59 INFO  revature.persistence.Queries:249 - Table successfully read
