@@ -12,6 +12,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.revature.annotations.Column;
 import com.revature.annotations.Id;
 import com.revature.annotations.Ignore;
 import com.revature.annotations.JoinColumn;
@@ -150,90 +151,97 @@ public class Queries {
 							}
 							
 							}
-						if (field.getType().equals(String.class)) {
-							String columnadd = "ALTER TABLE " + m.getSimpleClassName().toLowerCase() + " ADD COLUMN"
-									+ field.getColumnName() + " VARCHAR";
-							Connection conn = null;
-							PreparedStatement stmt = null;
-							ResultSet rs = null;
+						
+						if (((AnnotatedElement)field).isAnnotationPresent(Column.class)) {
 							
-							try {
-								conn = config.getConnection();
-								stmt = conn.prepareStatement(columnadd);
+							if (field.getType().equals(String.class)) {
+								String columnadd = "ALTER TABLE " + m.getSimpleClassName().toLowerCase() + " ADD COLUMN"
+										+ field.getColumnName() + " VARCHAR";
+								Connection conn = null;
+								PreparedStatement stmt = null;
+								ResultSet rs = null;
 								
-								if (stmt != null) {
-									rs = stmt.executeQuery();
-									log.info("Successfully added VARCHAR Column");
+								try {
+									conn = config.getConnection();
+									stmt = conn.prepareStatement(columnadd);
+									
+									if (stmt != null) {
+										rs = stmt.executeQuery();
+										log.info("Successfully added VARCHAR Column");
+									}
+									
+								}catch (SQLException e) {
+									log.error("Unable to add VARCHAR column");
 								}
 								
-							}catch (SQLException e) {
-								log.error("Unable to add VARCHAR column");
+							}
+							
+							if (field.getType().equals(Integer.class)) {
+								String columnadd = "ALTER TABLE " + m.getSimpleClassName().toLowerCase() + " ADD COLUMN"
+										+ field.getColumnName() + " INTEGER";
+								Connection conn = null;
+								PreparedStatement stmt = null;
+								ResultSet rs = null;
+								
+								try {
+									conn = config.getConnection();
+									stmt = conn.prepareStatement(columnadd);
+									
+									if (stmt != null) {
+										rs = stmt.executeQuery();
+										log.info("Successfully added INTEGER Column");
+									}
+									
+								}catch (SQLException e) {
+									log.error("Unable to add INTEGER column");
+								}
+							}
+							
+							if (field.getType().equals(Boolean.class)) {
+								String columnadd = "ALTER TABLE " + m.getSimpleClassName().toLowerCase() + " ADD COLUMN"
+										+ field.getColumnName() + " Boolean";
+								Connection conn = null;
+								PreparedStatement stmt = null;
+								ResultSet rs = null;
+								
+								try {
+									conn = config.getConnection();
+									stmt = conn.prepareStatement(columnadd);
+									
+									if (stmt != null) {
+										rs = stmt.executeQuery();
+										log.info("Successfully added Boolean Column");
+									}
+									
+								}catch (SQLException e) {
+									log.error("Unable to add Boolean column");
+								}
+							}
+							
+							if (field.getType().equals(Double.class)) {
+								String columnadd = "ALTER TABLE " + m.getSimpleClassName().toLowerCase() + " ADD COLUMN"
+										+ field.getColumnName() + " NUMERIC";
+								Connection conn = null;
+								PreparedStatement stmt = null;
+								ResultSet rs = null;
+								
+								try {
+									conn = config.getConnection();
+									stmt = conn.prepareStatement(columnadd);
+									
+									if (stmt != null) {
+										rs = stmt.executeQuery();
+										log.info("Successfully added NUMERIC Column");
+									}
+									
+								}catch (SQLException e) {
+									log.error("Unable to add NUMERIC column");
+								}
 							}
 							
 						}
 						
-						if (field.getType().equals(Integer.class)) {
-							String columnadd = "ALTER TABLE " + m.getSimpleClassName().toLowerCase() + " ADD COLUMN"
-									+ field.getColumnName() + " INTEGER";
-							Connection conn = null;
-							PreparedStatement stmt = null;
-							ResultSet rs = null;
-							
-							try {
-								conn = config.getConnection();
-								stmt = conn.prepareStatement(columnadd);
-								
-								if (stmt != null) {
-									rs = stmt.executeQuery();
-									log.info("Successfully added INTEGER Column");
-								}
-								
-							}catch (SQLException e) {
-								log.error("Unable to add INTEGER column");
-							}
-						}
 						
-						if (field.getType().equals(Boolean.class)) {
-							String columnadd = "ALTER TABLE " + m.getSimpleClassName().toLowerCase() + " ADD COLUMN"
-									+ field.getColumnName() + " Boolean";
-							Connection conn = null;
-							PreparedStatement stmt = null;
-							ResultSet rs = null;
-							
-							try {
-								conn = config.getConnection();
-								stmt = conn.prepareStatement(columnadd);
-								
-								if (stmt != null) {
-									rs = stmt.executeQuery();
-									log.info("Successfully added Boolean Column");
-								}
-								
-							}catch (SQLException e) {
-								log.error("Unable to add Boolean column");
-							}
-						}
-						
-						if (field.getType().equals(Double.class)) {
-							String columnadd = "ALTER TABLE " + m.getSimpleClassName().toLowerCase() + " ADD COLUMN"
-									+ field.getColumnName() + " NUMERIC";
-							Connection conn = null;
-							PreparedStatement stmt = null;
-							ResultSet rs = null;
-							
-							try {
-								conn = config.getConnection();
-								stmt = conn.prepareStatement(columnadd);
-								
-								if (stmt != null) {
-									rs = stmt.executeQuery();
-									log.info("Successfully added NUMERIC Column");
-								}
-								
-							}catch (SQLException e) {
-								log.error("Unable to add NUMERIC column");
-							}
-						}
 						
 						/*if (((AnnotatedElement)field).isAnnotationPresent(JoinColumn.class)) {
 							String columnadd = "ALTER TABLE " + m.getSimpleClassName().toLowerCase() + " ADD COLUMN "
