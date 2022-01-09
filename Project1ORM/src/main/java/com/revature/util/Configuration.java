@@ -25,6 +25,8 @@ public class Configuration {
 	
 	private static final Logger log = LoggerFactory.getLogger(Configuration.class);
 	
+	PropertiesCache prop = new PropertiesCache();
+	
 	public Configuration addAnnotatedClass(Class<?> annotatedclass) {
 		
 		if  (metaModelList == null) {
@@ -57,24 +59,15 @@ public class Configuration {
 			return null;
 		}
 		
-		try {
-			conn = DriverManager.getConnection(dbUrl, dbUsername, dbPassword);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		
-		Properties prop = new Properties();
-		
 		String url = "";
 		String username = "";
 		String password = "";
 		
-		try (InputStream input = getClass().getClassLoader().getResourceAsStream("application.properties")){
-			prop.load(input);
+		try{
 			
-			url = prop.getProperty("url");
-			username = prop.getProperty("username");
-			password = prop.getProperty("password");
+			url = PropertiesCache.getInstance().getProperty("url");
+			username = PropertiesCache.getInstance().getProperty("username");
+			password = PropertiesCache.getInstance().getProperty("password");
 			
 			conn = DriverManager.getConnection(url, username, password);
 			
@@ -82,9 +75,7 @@ public class Configuration {
 			log.info("Connected to Database");
 			log.info("*********************************");
 			
-		} catch (IOException e) {
-			log.error("Something is wrong with the app.properties file");
-		}catch (SQLException e) {
+		} catch (SQLException e) {
 			log.error("SQL exception thrown - Cannot establish DB connectionn");
 		}
 		

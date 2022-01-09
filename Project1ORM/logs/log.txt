@@ -1,0 +1,18 @@
+2022-01-08 17:10:41 INFO  revature.util.Configuration:45 - *********************************
+2022-01-08 17:10:41 INFO  revature.util.Configuration:46 - Trying to establish a connection
+2022-01-08 17:10:41 INFO  revature.util.Configuration:47 - *********************************
+2022-01-08 17:10:41 INFO  revature.util.Configuration:81 - *********************************
+2022-01-08 17:10:41 INFO  revature.util.Configuration:82 - Connected to Database
+2022-01-08 17:10:41 INFO  revature.util.Configuration:83 - *********************************
+2022-01-08 18:32:37 INFO  revature.util.Configuration:47 - *********************************
+2022-01-08 18:32:37 INFO  revature.util.Configuration:48 - Trying to establish a connection
+2022-01-08 18:32:37 INFO  revature.util.Configuration:49 - *********************************
+2022-01-08 18:32:37 INFO  revature.util.Configuration:80 - *********************************
+2022-01-08 18:32:37 INFO  revature.util.Configuration:81 - Connected to Database
+2022-01-08 18:32:37 INFO  revature.util.Configuration:82 - *********************************
+2022-01-08 18:33:39 INFO  revature.util.Configuration:47 - *********************************
+2022-01-08 18:33:39 INFO  revature.util.Configuration:48 - Trying to establish a connection
+2022-01-08 18:33:39 INFO  revature.util.Configuration:49 - *********************************
+2022-01-08 18:33:39 INFO  revature.util.Configuration:74 - *********************************
+2022-01-08 18:33:39 INFO  revature.util.Configuration:75 - Connected to Database
+2022-01-08 18:33:39 INFO  revature.util.Configuration:76 - *********************************
