@@ -15,7 +15,6 @@ public class PropertiesCache {
 	
 	PropertiesCache() {
 		InputStream in = this.getClass().getClassLoader().getResourceAsStream("application.properties");
-		System.out.println("Reading properties from file");
 		try {
 			configProp.load(in);
 		} catch (IOException e) {
