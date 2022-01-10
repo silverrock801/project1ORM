@@ -14,7 +14,15 @@
 
 
 # Requirements
- The requirements to use the ORM properly are that your the Classes that you wish to persist into the Database are named how the table will be named. The ORM will automatically name the table after the class and will turn it into lower case. So if your class is named SharkS, the table in the database will be named sharks. For the classes that you wish to make into tables, you must have a Id field and have it annotated with the @Id annotation. In order to start to have the ORM begin to create the tables, you must first put the classes into a list of metamodels (this is already created so you just need to put them into the list), and then run the initialize method. This will then begin the process of the table creation. The final requirement for to use the ORM is to make a application.properties file in your scr/main/resources folder and have your database url, username and password written onto it. The dependencies you need to implement into your pom.xml file can be found below.
+ The requirements to use the ORM properly are that your the Classes that you wish to persist into the Database are named how the table will be named. The ORM will automatically name the table after the class and will turn it into lower case. So if your class is named SharkS, the table in the database will be named sharks. For the classes that you wish to make into tables, you must have a Id field and have it annotated with the @Id annotation. In order to start to have the ORM begin to create the tables, you must first put the classes into a list of metamodels (this is already created so you just need to put them into the list), and then run the initialize method. This will then begin the process of the table creation. The final requirement for to use the ORM is to make a application.properties file in your scr/main/resources folder and have your database url, username and password written onto it. You also have to clone the repository and have it stored locally into your repository. The dependencies you need to implement into your pom.xml file can be found below.
+ 
+ 		<dependency>
+			<groupId>com.revature</groupId>
+			<artifactId>Project1ORM</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+ 
+ 
  
  # Available methods
  
